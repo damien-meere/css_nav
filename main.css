@@ -1,0 +1,73 @@
+.navDefault{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #4a4a4f;
+}
+
+button {
+    border: none;
+    height: 50px;
+    width: 150px;
+    background-color: #0997d3;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.dropdownMenu{
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    width: 150px; /*match button width*/
+    padding: 0;
+    text-align: center;
+    
+    /*look to cssmatic.com to generate these values*/
+    box-shadow: 6px 10px 42px -4px rgba(0,0,0,0.5);
+    
+    /*we want our dropdown menu to default to invisible and only appear on hover*/
+    /*so we will se the translateY variable to -100%, which takes it off the screen*/
+    transform: translateY(-100%);
+    transition: transform .5s ease-in-out;
+    
+    
+    /*Z-Index ensures the dropdown element is always stacked underneath competing elements*/
+    z-index: -1;
+}
+
+.dropdownLink{
+    text-decoration: none; /*remove underline and other deecorations*/
+    display: block;
+    background-color: #f9f9f9;
+    color: #4a4a4f;
+    padding: 10px 5px;
+    
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+}
+
+.dropdownLink:hover{
+    color: #fff;
+    background-color: #a0a0a3;
+    
+}
+
+.dropdown {
+    width: 150px;
+    position: relative;
+    
+}
+
+.dropdown:hover button {
+    background-color: #081ec5
+}
+
+.dropdown:hover .dropdownMenu {
+    /*we want our dropdown menu to appear on hover*/
+    /*so we will set the translateY variable to 100%, which brings it back on screen*/
+    transform: translateY(0);
+}
